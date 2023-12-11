@@ -55,7 +55,7 @@ function slide(carouselItems, previousOrNext, previousButton, nextButton, carous
     if (request) {
         const { title, link, languages, description, carousel } = await request.json();
         projectTitle.innerHTML = title;
-        projectLink.innerHTML = link;
+        projectLink.setAttribute("href", link);
 
         languages.forEach(language => {
             const li = document.createElement("li");
