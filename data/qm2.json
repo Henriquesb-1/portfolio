@@ -1,0 +1,7 @@
+{
+    "title": "Landing Page Queen Mary 2",
+    "link": "https://landing-page-queen-mary-2-6hv44jrk8-henriquesb-1.vercel.app",
+    "description": "<p>Além de amante de tecnologia, também sou apaixonado por navios, em especial, pelo Cunard Queen Mary 2.</p><p>Tanto que fiz uma landing page contando um pouco de sua história, caracteristicas e etc.</p><p>Fiz esse site quando estava no inicio do estudo de React, para por em prática o que tinha aprendido.</p>",
+    "languages": ["React", "Typescript"],
+    "carousel": ["home.jpg", "history.jpg", "rooms.jpg", "attractions.jpg"]
+}
