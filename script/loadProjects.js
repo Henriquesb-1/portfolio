@@ -71,4 +71,4 @@
 
         allProjects.forEach(project => projects.append(createProjectContainer(project)));
     })
-}())
+}());
