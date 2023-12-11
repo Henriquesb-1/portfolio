@@ -1,7 +1,7 @@
 (function () {
-    const technologyFilter = $("#technology-filter");
-    const submit = $("[submit]");
-    const projects = $("#projects");
+    const technologyFilter = document.getElementById("technology-filter");
+    const submit = document.querySelector("[submit]");
+    const projects = document.getElementById("projects");
 
     async function loadProjectInfo() {
         const request = await fetch(`/data/projects.json`);
@@ -12,37 +12,37 @@
     function createProjectContainer(project) {
         const { title, isOnAir, description, link } = project;
 
-        const technologyGroup = $("div");
-        technologyGroup.attr("class", "technology-card flex-column-between margin-y");
+        const technologyGroup = document.createElement("div");
+        technologyGroup.setAttribute("class", "technology-card flex-column-between margin-y");
 
-        const divTitle = $("div");
-        divTitle.attr("class", "title");
+        const divTitle = document.createElement("div");
+        divTitle.setAttribute("class", "title");
 
-        const h2 = $("h2");
-        h2.html(title);
+        const h2 = document.createElement("h2");
+        h2.innerHTML = title;
         divTitle.append(h2);
 
-        const divIsOnAir = $("div");
-        divIsOnAir.attr("class", "isOnAir");
+        const divIsOnAir = document.createElement("div");
+        divIsOnAir.setAttribute("class", "isOnAir");
 
-        const spanIsOnAir = $("span");
-        spanIsOnAir.html(`Está publicado: ${isOnAir ? "Sim" : "Não"}`);
+        const spanIsOnAir = document.createElement("span");
+        spanIsOnAir.innerHTML = `Está publicado: ${isOnAir ? "Sim" : "Não"}`
         divIsOnAir.append(spanIsOnAir);
 
-        const divDescription = $("div");
-        divDescription.attr("class", "description");
+        const divDescription = document.createElement("div");
+        divDescription.setAttribute("class", "description");
 
-        const pDescription = $("p");
-        pDescription.html(description);
+        const pDescription = document.createElement("p");
+        pDescription.innerHTML = description;
         divDescription.append(pDescription);
 
-        const divLink = $("div");
-        divLink.attr("class", "link");
+        const divLink = document.createElement("div");
+        divLink.setAttribute("class", "link");
 
-        const aLink = $("a");
+        const aLink = document.createElement("a");
         aLink.href = `/project.html?t=${link}`;
-        aLink.html("Ver Detalhes");
-        aLink.attr("class", "clean-link");
+        aLink.innerHTML = "Ver Detalhes";
+        aLink.setAttribute("class", "clean-link");
         divLink.append(aLink);
 
         technologyGroup.append(divTitle);
@@ -59,13 +59,11 @@
         allProjects.forEach(project => projects.append(createProjectContainer(project)))
     };
 
-    submit.on("click", async e => {
+    submit.addEventListener("click", async e => {
         e.preventDefault();
 
         const filter = technologyFilter.value;
-
-        $(".technology-card")
-            .each((index, element) => projects.remove(element))
+        document.querySelectorAll(".technology-card").forEach(element => projects.removeChild(element))
 
         let allProjects = await loadProjectInfo();
 

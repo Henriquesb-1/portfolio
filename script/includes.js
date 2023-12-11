@@ -1,18 +1,16 @@
 (async function () {
-    const includes = $("[include]");
+    const includes = document.querySelectorAll("[include]");
 
-    includes.each((index, element) => {
-        const url = $(element).attr("include");
-        const willReplace = $(element).attr("replace");
+    includes.forEach(async element => {
+        const url = element.getAttribute("include");
+        const replace = element.hasAttribute("replace");
 
-        $.ajax({
-            url,
-            success(data) {
-                willReplace ? $(element).html(data) : $(element).append(data);
+        const request = await fetch(url);
+        const text = await request.text();
+        
+        replace ? element.innerHTML = text : element.insertAdjacentHTML("afterbegin", text);
 
-                element.removeAttribute("include");
-                element.removeAttribute("replace");
-            }
-        });
+        element.removeAttribute("include");
+        element.removeAttribute("replace");
     });
 } ())
