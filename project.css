@@ -1,0 +1,66 @@
+.carousel-section {
+    overflow-x: hidden;
+}
+
+.carousel {
+    position: relative;
+    display: grid;
+
+    width: 900px;
+}
+
+.carousel-item {
+    width: 100%;
+    position: relative;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+}
+
+.button-slide {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+}
+
+.next-button {
+    right: 0;
+}
+
+.button-slide button:disabled {
+    cursor: auto;
+}
+
+.button-slide button:disabled svg path {
+    fill: #444;
+}
+
+.carousel-status {
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    margin-left: 25px;
+}
+
+.project-description {
+    width: 800px;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel {
+        width: 100%;
+    }
+
+    .project-description {
+        width: 100%;
+    }
+
+    .button-slide button svg {
+        width: 30px;
+        height: 30px;
+    }
+}

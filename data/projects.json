@@ -1,0 +1,23 @@
+{
+    "allProjects": [{
+        "title": "SB News",
+        "isOnAir": false,
+        "description": "Um portal de notícias com sessão de comentários, login e muito mais",
+        "link": "sbNews"
+    }, {
+        "title": "Calculators",
+        "isOnAir": true,
+        "description": "Um webapp com várias calcularas uteis como bhaskara, pitagoras e etc",
+        "link": "calculator"
+    }, {
+        "title": "Landing page Queen Mary 2",
+        "isOnAir": true,
+        "description": "Uma landing page sobre as caracteristicas do navio Queen Mary 2",
+        "link": "qm2"
+    }],
+    "java": [{
+        "title": "SB News",
+        "isOnAir": false,
+        "description": "git.com"
+    }]
+}

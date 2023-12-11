@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head include="/templates/head.html">
+    <script defer src="./script/includes.js"></script>
+    <title>Sb Portfólio</title>
+</head>
+
+<body class="app" id="body">
+    <header class="flex-row-center header" include="/templates/header.html"></header>
+
+    <section class="presentation-container flex-row-around">
+        <div class="presentation-image">
+            <img src="./assets/img/cover.png" alt="">
+        </div>
+
+        <div>
+            <h2 class="text-center">
+                Henrique Silva <br /> Full Stack Developer
+            </h2>
+
+            <p>
+                Bem-vindo ao meu portfólio.
+            </p>
+        </div>
+    </section>
+
+    <main>
+        <section class="margin-y">
+            <div>
+                <h2 class="text-center">Projetos realizados</h2>
+            </div>
+
+            <div class="filters flex-column-center">
+                <div class="filter">
+                    <div>
+                        <label for="technology-filter">Filtar por tecnologia</label>
+                    </div>
+
+                    <div>
+                        <select name="" id="technology-filter">
+                            <option value="allProjects">All</option>
+                            <option value="java">Java</option>
+                            <option value="react">React</option>
+                            <option value="typescript">Typescript</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="filter">
+                    <button type="submit" submit>Filtrar</button>
+                </div>
+            </div>
+
+            <div id="projects" class="flex-row-around margin-y"></div>
+        </section>
+
+        <section class="margin-y">
+            <div>
+                <h2 class="text-center">Sobre mim</h2>
+            </div>
+
+            <div class="about">
+                <p>Apaixonado por tecnologia, mexo com computador desde os 12 anos, montando e desmontando e quebrando pra aprender.</p>
+                <p>Escrevi meu primeiro Hello World com 15 anos, porém, por problemas pessoais, não levei pra frente</p>
+                <p>Há um ano, ressussitei essa paixão, entrei pra faculdade e comecei estudar incessantemente.</p>
+                <p>Resolver problemas usando a programação é o que me faz feliz, amo ver que pude aplicar tudo que aprendi resolvendo algum problema pra alguém.</p>
+                <p>Possuo um perfil calmo e reservado. Amo programar ouvindo um jazz com o companheiro inseparavel de todo o programador, o café.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" include="/templates/footer.html" replace></footer>
+
+    <script src="./script/loadProjects.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: pixelifySans;
+    src: url("./assets/font/pixelifySans.ttf");
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+
+    font-family: pixelifySans, 'Courier New', Courier, monospace;
+
+    background-color: #222;
+
+    color: #fff;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header,
+.footer {
+    background-color: rgb(0, 80, 80);
+}
+
+.footer {
+    padding: 10px;
+}
+
+.flex-row-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row-around {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column-between {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-flow: column;
+}
+
+.clean-button {
+    background: none;
+    padding: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+.clean-link {
+    text-decoration: none;
+    color: #fff;
+    padding: 7px;
+}
+
+.clean-link:hover {
+    background-color: #610000;
+    border-radius: 10px;
+}
+
+.margin-y {
+    margin: 20px 0;
+}
+
+.text-center {
+    text-align: center;
+}
