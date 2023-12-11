@@ -1,0 +1,7 @@
+{
+    "title": "Calculators",
+    "link": "https://calculators-nu.vercel.app",
+    "description": "<p>Projeto idealizado para resolver um problema real meu.</p><p>Estava fazendo exercicios de matemática e perdia muito tempo com fórmulas, então resolvi fazer esse app para me ajudar.</p><p>Possui as funcionalidades: </p><ul><li>Mostra a fórmula e como é feito o calculo para chegar no resultado</li><li>Mudança de tema claro ou escuro para escolha</li><li>Atalho rápido para todas as opções para não ter que retornar a página principal</li></ul>",
+    "languages": ["React", "Typescript"],
+    "carousel": ["home.jpg", "bhaskara.jpg", "conversor.jpg", "fatoring.jpg", "temperature.jpg"]
+}
