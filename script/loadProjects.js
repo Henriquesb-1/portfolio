@@ -55,20 +55,20 @@
 
     window.onload = async e => {
         const technologies = await loadProjectInfo();
-        const allProjects = technologies[technologyFilter.value];
+        const allProjects = technologies;
         allProjects.forEach(project => projects.append(createProjectContainer(project)))
     };
 
     submit.addEventListener("click", async e => {
         e.preventDefault();
 
-        document.querySelectorAll(".technology-card").forEach(element => {
-            projects.removeChild(element)
-        })
+        const filter = technologyFilter.value;
+        document.querySelectorAll(".technology-card").forEach(element => projects.removeChild(element))
 
-        const technologies = await loadProjectInfo();
-        const projectsFiltered = technologies[technologyFilter.value];
+        let allProjects = await loadProjectInfo();
 
-        projectsFiltered.forEach(project => projects.append(createProjectContainer(project)));
+        if(filter !== "all") allProjects = allProjects.filter(technology => technology.technologies.includes(filter));
+
+        allProjects.forEach(project => projects.append(createProjectContainer(project)));
     })
 }())
