@@ -19,11 +19,5 @@
         "description": "Uma landing page sobre as caracteristicas do navio Queen Mary 2",
         "link": "qm2",
         "technologies": "react, typescript"
-    }, {
-        "title": "HB Cadastro de Clientes",
-        "isOnAir": true,
-        "description": "Uma landing page sobre as caracteristicas do navio Queen Mary 2",
-        "link": "qm2",
-        "technologies": "java"
     }
 ]
