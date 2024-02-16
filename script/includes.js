@@ -26,8 +26,6 @@
                 element.innerHTML = data;
             break;
         }
-        
-        // replace ? element.innerHTML = text : element.insertAdjacentHTML("afterbegin", text);
 
         element.removeAttribute("include");
         element.removeAttribute("replace");
